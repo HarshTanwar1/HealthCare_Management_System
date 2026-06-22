@@ -2,7 +2,7 @@
 
 # 🏥 E-Health Care Management System
 
-A desktop application to digitize hospital operations — patient admissions, discharges, billing, and staff management — for **Apex Hospital**
+A desktop application to digitize hospital operations — patient admissions, discharges, billing, and staff management — for Apex Hospital
 
 <br/>
 
@@ -24,17 +24,14 @@ The **E-Health Care Management System** is a Java Swing desktop application that
 
 <br>
 
-## ✨ Features
+## 🌟 Key Highlights
 
-| Module                          | What it does                                                                                                  |
-| ------------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| 🔐 **Staff Login**              | Authenticates users against the `HOSPITAL_STAFF` table.                                                       |
-| 🛡️ **Admin-gated Registration** | New accounts require an admin key before a staff member can be registered.                                    |
-| 🧭 **Task Dashboard**           | A central menu that routes to every operation in the system.                                                  |
-| ➕ **Admit Patient**            | Records name, ailment, and admit date (via a calendar picker) and auto-suggests the next free patient number. |
-| 🚪 **Discharge Patient**        | Looks up a patient, updates their status, and opens the billing window.                                       |
-| 🧾 **Automatic Billing**        | Computes the bill from the number of days admitted (₹500/day).                                                |
-| 🔎 **View & Search Records**    | Displays all patients in a live table and supports search by name.                                            |
+- 🖥️ **End-to-end desktop app** — every layer built from scratch: GUI, event handling, data access, and packaging into a runnable JAR.
+- 🗄️ **Real database integration** — full CRUD on patient records over JDBC with Apache Derby.
+- 🔐 **Two-tier access control** — staff login plus an admin-key gate for registering new users.
+- 🧾 **Automated billing logic** — bills are derived from admit/discharge date arithmetic, not entered by hand.
+- 📅 **Thoughtful UX touches** — calendar date picker, live searchable record table, and auto-suggested patient numbers.
+- 📦 **Distributable build** — packaged with Apache Ant, bundling all dependencies for one-command launch.
 
 <br>
 
@@ -55,31 +52,17 @@ The **E-Health Care Management System** is a Java Swing desktop application that
 
 <br>
 
-## 🏗️ Architecture & Flow
+## ✨ Features & Functionality
 
-```
-                   ┌─────────────────┐
-                   │  Login (Staff)  │
-                   └────────┬────────┘
-            register │                │ authenticate
-        ┌────────────▼───┐    ┌───────▼─────────────┐
-        │  Admin Key →   │    │   Task Dashboard    │
-        │  Sign Up Staff │    └──┬─────────┬────────┘
-        └────────────────┘       │         │        │
-                          ┌──────▼──┐ ┌────▼────┐ ┌─▼──────────┐
-                          │  Admit  │ │Discharge│ │View / Search│
-                          │ Patient │ │ Patient │ │  Records    │
-                          └─────────┘ └────┬────┘ └─────────────┘
-                                           │
-                                    ┌──────▼──────┐
-                                    │  Auto Bill  │
-                                    └─────────────┘
-```
-
-### Data Model
-
-- **`HOSPITAL_STAFF`** — `USERNAME`, `PASSWORD`
-- **`PATIENTS`** — `PATIENT_NUMBER`, `PATIENT_NAME`, `PATIENT_AILMENT`, `STATUS`, `ADMITDATE`, `DISCHARGEDATE`
+| Module                          | What it does                                                                                                  |
+| ------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| 🔐 **Staff Login**              | Authenticates users against the `HOSPITAL_STAFF` table.                                                       |
+| 🛡️ **Admin-gated Registration** | New accounts require an admin key before a staff member can be registered.                                    |
+| 🧭 **Task Dashboard**           | A central menu that routes to every operation in the system.                                                  |
+| ➕ **Admit Patient**            | Records name, ailment, and admit date (via a calendar picker) and auto-suggests the next free patient number. |
+| 🚪 **Discharge Patient**        | Looks up a patient, updates their status, and opens the billing window.                                       |
+| 🧾 **Automatic Billing**        | Computes the bill from the number of days admitted (₹500/day).                                                |
+| 🔎 **View & Search Records**    | Displays all patients in a live table and supports search by name.                                            |
 
 <br>
 

@@ -117,7 +117,7 @@ ant run        # main class: healthlet.NewJFrame
 
 - Designing **multi-window Java Swing** applications and managing navigation between `JFrames`.
 - Using the **NetBeans GUI Builder** to lay out forms and wire up event-driven button handlers.
-- Connecting Java to a relational database with **JDBC** — executing `INSERT` / `SELECT` / `UPDATE` queries and reading `ResultSet`s.
+- Connecting Java to a relational database with **JDBC** — executing `INSERT` / `SELECT` / `UPDATE` queries and reading `ResultSets`.
 - Populating a Swing `JTable` dynamically from query results with `DefaultTableModel`.
 - Integrating third-party components (the **JCalendar** date picker) and formatting dates with `SimpleDateFormat`.
 - Implementing real business logic, like deriving a bill from date arithmetic.

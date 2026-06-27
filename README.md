@@ -37,7 +37,7 @@ The **E-Health Care Management System** is a Java Swing desktop application that
 
 ## 🛠️ Tech Stack
 
-| Category          | Technology                                                                |
+| Layer             | Technologies                                                              |
 | ----------------- | ------------------------------------------------------------------------- |
 | **Language**      | Java (SE 13)                                                              |
 | **GUI**           | Java Swing (NetBeans GUI Builder / Matisse)                               |

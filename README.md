@@ -2,7 +2,7 @@
 
 # 🏥 E-Health Care Management System
 
-A desktop application to digitize hospital operations — patient admissions, discharges, billing, and staff management — for Apex Hospital
+A desktop application to digitize hospital operations — patient admissions, discharges, billing, and staff management
 
 <br/>
 
